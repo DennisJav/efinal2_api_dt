@@ -25,7 +25,7 @@ public class WebSecurity {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
        http.cors().and().csrf().disable().exceptionHandling().authenticationEntryPoint(authenticationEntryPoint).and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and().authorizeRequests().antMatchers("/tokens/obtener/**")
+                .and().authorizeRequests().antMatchers("/estudiantes/**")
                 .permitAll().anyRequest().authenticated();
 
        //http.authenticationProvider(this.authenticationProvider());
